@@ -107,3 +107,61 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         - Token URL: https://example.com (this will be replaced later)
         - Scope Name: payment_approval
 
+        <image 2-4-2>
+        
+ 4.	Scroll down to the ‘Security’ section of the API and you will see that the client ID and the client Secret are the default security measures added to an API unless configured otherwise. We therefore have to specifically add the oAuth 2.0 provider we created to the execute payment operation. Ensure the ‘Security’ section of your API matches the screen shot below.  
+ 
+        <image 2-4-3>
+
+5.	Scroll down to the ‘Paths section and expand the path for ‘POST payments/{id}/execute’.
+6.	Ensure the security options for the API does not use the ‘API security definitions’ and instead is set to have the ‘payment approval’ oAuth  (note the client ID and client secret should also be unset). 
+ 
+        <image 2-4-5>
+
+7.	Click save on the top right.
+
+### 2.5 Adding the oAuth provider to the product
+1.	Press ‘All APIs’ at the top to return to the list of APIs
+2.	Click on products
+3.	Click on the ‘Payments’ product to see the details.
+4.	Scroll down to the APIs section and ensure the ‘payment authorization’ API has already been added. If not, press the plus on the top right of the APIs section and add it.
+
+        <image 2-5-1>
+
+
+        <image 2-5-2>
+
+5.	Click on save on the top right. 
+
+### 2.6 Publish product to Bluemix
+1.	Hit ‘Publish’ on the top right of the API Connect toolkit
+2.	Click ‘Add and Manage Targets’
+3.	Select ‘Add IBM Bluemix Target’.
+
+        <image 2-6-1>
+4.	You should already be signed into Bluemix.
+5.	Select the region and space where you previously created your own API Connect instance. Speak to your instructor if you have not yet done this. 
+6.	Select the catalog you would like to use (the recommendation is to use sandbox)
+ 
+        <image 2-6-2>
+        
+7.	On the screen to select the Bluemix application, type a new application name in at the bottom of the screen (e.g. madridApicLab) then press the + to add the application. Then click save. 
+
+        <image 2-6-3>
+        
+8.	You are returned back to the main API Connect toolkit page. Select the ‘Publish’ button on the top right again. Select the Bluemix target you just set up.
+
+9.	Check the ‘Publish Application’ only and hit ‘Publish’.
+
+        <image 2-6-4>
+
+10.	Once published, you will see a ‘Successfully published application’ message. 
+
+        <image 2-6-5>
+
+
+11.	Select the ‘Publish’ button on the top right again. Select the Bluemix target you set up.
+
+12.	Select ‘Stage or Publish products’, then ‘Select specific products’ and choose the ‘payments’ product. 
+
+        <image 2-6-6>
