@@ -58,19 +58,19 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         
 5.	Scroll down to the oAuth 2 section and set:
 
-- Client Type: Confidential 
-- Scope Name: payment_approval (delete the other 2 scopes)
-- Grants: Check only ‘Access Code’, uncheck the others
-- Identify Extraction: Redirect
-- Redirect URL: https://aaservergk.eu-gb.mybluemix.net/login
-- Authentication URL: https://thinkibm-services.mybluemix.net/auth
-- TLS Profile: leave blank
-- Authorize application user using: Authenticated
-- Time to live: 3597
-- Switch off ‘Enable Refresh Tokens’, ‘Enable Revocation’ and ‘Enable Token Introspection’. 
-- Leave Metadata URL and TLS profile blank. 
+        - Client Type: Confidential 
+        - Scope Name: payment_approval (delete the other 2 scopes)
+        - Grants: Check only ‘Access Code’, uncheck the others
+        - Identify Extraction: Redirect
+        - Redirect URL: https://aaservergk.eu-gb.mybluemix.net/login
+        - Authentication URL: https://thinkibm-services.mybluemix.net/auth
+        - TLS Profile: leave blank
+        - Authorize application user using: Authenticated
+        - Time to live: 3597
+        - Switch off ‘Enable Refresh Tokens’, ‘Enable Revocation’ and ‘Enable Token Introspection’. 
+        - Leave Metadata URL and TLS profile blank. 
 
-        <image 2-3-4>
+              <image 2-3-4>
 
 
 6.	Click save on the top right.
