@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/garyk295/madridapiclab2/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+# Lab 2: Protecting a payments API using oAuth 2.0
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Part 1: Set up API Connect
 
-### Markdown
+This section can be skipped if you already have a Bluemix account and an API Connect service provisioned. If not, please follow the link below and complete ‘Lab 0 - Setup IBM API Connect’. Once complete, return to this document and move onto part 2. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+[Setup IBM API Connect Instructions](https://ibm-apiconnect.github.io/pot/lab0.html) 
 
-```markdown
-Syntax highlighted code block
+## Part 2: Secure and publish API
 
-# Header 1
-## Header 2
-### Header 3
+### 2.1 Create a directory and download the loopback project from github (placeholder)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/garyk295/madridapiclab2/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### 2.2 Exploring the ‘payments’ loopback model
+1.	Run the following command to start the API Connect toolkit:
+              apic edit 
+2.	The toolkit will open up in your web browser and request you to sign into Bluemix, please do so using your IBM ID and password. 
+3.	You will observe an API already exists named ‘payments’. This uses an in memory database to store details of payments and exposes a number of operations to allow payments to be reserved and later executed. 
+ 
+        <image 2-2-1>
