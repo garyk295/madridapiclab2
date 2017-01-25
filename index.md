@@ -13,7 +13,9 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
 ### 2.2 Exploring the ‘payments’ loopback model
 1.	Run the following command to start the API Connect toolkit:
-        apic edit 
+        ```
+        apic edit
+        ```
 2.	The toolkit will open up in your web browser and request you to sign into Bluemix, please do so using your IBM ID and password. 
 3.	You will observe an API already exists named ‘payments’. This uses an in memory database to store details of payments and exposes a number of operations to allow payments to be reserved and later executed. 
  
