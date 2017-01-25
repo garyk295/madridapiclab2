@@ -13,6 +13,7 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
 ### 2.2 Exploring the ‘payments’ loopback model
 1.	Run the following command to start the API Connect toolkit:
+
         ```
         apic edit
         ```
