@@ -76,11 +76,11 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 6.	Click save on the top right.
 7.	Scroll down until you see the section to declare parameters.
 8.	Click the plus icon to create a new parameter, set:
-- Name: payment_id
-- Located in: Query
-- Required: yes (tick)
-- Type: String
+        - Name: payment_id
+        - Located in: Query
+        - Required: yes (tick)
+        - Type: String
  
-        <image 2-3-5>
+             <image 2-3-5>
 
 
