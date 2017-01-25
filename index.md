@@ -21,3 +21,13 @@ This section can be skipped if you already have a Bluemix account and an API Con
 3.	You will observe an API already exists named ‘payments’. This uses an in memory database to store details of payments and exposes a number of operations to allow payments to be reserved and later executed. 
  
         <image 2-2-1>
+
+4.	Click on the payments api to go into its design. 
+ 
+        <image 2-2-2>
+        
+5.	Scroll down until you can see the paths of the API. You will see 2 paths have been created for you:
+        a.	POST / payments – this allows a payment reservation to be created and passes back a payment ID
+        b.	POST payments/{id}/execute – this executes the payment and finalises it. It accepts a payment ID as a parameter in the URL (passed back from operation a). 
+
+<image 2-2-3>
