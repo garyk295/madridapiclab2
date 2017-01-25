@@ -64,7 +64,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 - Identify Extraction: Redirect
 - Redirect URL: https://aaservergk.eu-gb.mybluemix.net/login
 - Authentication URL: https://thinkibm-services.mybluemix.net/auth
-- TLS Profile: <leave blank>
+- TLS Profile: leave blank
 - Authorize application user using: Authenticated
 - Time to live: 3597
 - Switch off ‘Enable Refresh Tokens’, ‘Enable Revocation’ and ‘Enable Token Introspection’. 
