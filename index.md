@@ -46,7 +46,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 
 1.	Navigate to the ‘payment_apis’ folder on the command line or terminal
 2.	Run the following command to start the API Connect toolkit:
-                        
-                        apic edit 
+
+        apic edit 
 3.	Click on ‘Add’ and select ‘OAuth 2.0 Provider API’.
 
