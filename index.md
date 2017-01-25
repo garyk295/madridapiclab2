@@ -84,4 +84,11 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
  
              <image 2-3-5>
 
+9.	Click save on the top right.
+10.	Scroll to the ‘paths’ section of the API. 
+11.	Expand the GET /oauth2/authorize
+12.	Click ‘Add Parameter’ and select ‘payment_id’.
 
+           <image 2-3-6>
+           
+13.	Click save on the top right.
