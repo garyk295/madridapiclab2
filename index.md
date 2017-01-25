@@ -20,11 +20,11 @@ This section can be skipped if you already have a Bluemix account and an API Con
 2.	The toolkit will open up in your web browser and request you to sign into Bluemix, please do so using your IBM ID and password. 
 3.	You will observe an API already exists named ‘payments’. This uses an in memory database to store details of payments and exposes a number of operations to allow payments to be reserved and later executed. 
  
-        <img src="/madridapiclab2/images/2-2-1.png" width="450">
+      <img src="/madridapiclab2/images/2-2-1.png" width="450">
 
 4.	Click on the payments api to go into its design. 
  
-        <img src="/madridapiclab2/images/2-2-2.png" width="450">
+      <img src="/madridapiclab2/images/2-2-2.png" width="450">
         
 5.	Scroll down until you can see the paths of the API. You will see 2 paths have been created for you:
 
@@ -32,7 +32,7 @@ This section can be skipped if you already have a Bluemix account and an API Con
  
  b. POST payments/{id}/execute – this executes the payment and finalises it. It accepts a payment ID as a parameter in the URL (passed back from operation a). 
 
-        <img src="/madridapiclab2/images/2-2-3.png" width="450">
+    <img src="/madridapiclab2/images/2-2-3.png" width="450">
         
 6.	Go back to the terminal and press ctrl+c to close the API Connect toolkit. Close the web browser. 
 
@@ -50,7 +50,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         apic edit 
 3.	Click on ‘Add’ and select ‘OAuth 2.0 Provider API’.
 
-        <img src="/madridapiclab2/images/2-3-1.png" width="450">
+     <img src="/madridapiclab2/images/2-3-1.png" width="450">
         
 4.	Name the oAuth API ‘payment authorization’ and select ‘Create API’.
  
