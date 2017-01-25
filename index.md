@@ -20,11 +20,11 @@ This section can be skipped if you already have a Bluemix account and an API Con
 2.	The toolkit will open up in your web browser and request you to sign into Bluemix, please do so using your IBM ID and password. 
 3.	You will observe an API already exists named ‘payments’. This uses an in memory database to store details of payments and exposes a number of operations to allow payments to be reserved and later executed. 
  
-        <image 2-2-1>
+        <img src="/madridapiclab2/images/2-2-1.png" width="450">
 
 4.	Click on the payments api to go into its design. 
  
-        <image 2-2-2>
+        <img src="/madridapiclab2/images/2-2-2.png" width="450">
         
 5.	Scroll down until you can see the paths of the API. You will see 2 paths have been created for you:
 
@@ -32,7 +32,7 @@ This section can be skipped if you already have a Bluemix account and an API Con
  
  b. POST payments/{id}/execute – this executes the payment and finalises it. It accepts a payment ID as a parameter in the URL (passed back from operation a). 
 
-        <image 2-2-3>
+        <img src="/madridapiclab2/images/2-2-3.png" width="450">
         
 6.	Go back to the terminal and press ctrl+c to close the API Connect toolkit. Close the web browser. 
 
@@ -50,11 +50,11 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         apic edit 
 3.	Click on ‘Add’ and select ‘OAuth 2.0 Provider API’.
 
-        <image 2-3-1>
+        <img src="/madridapiclab2/images/2-3-1.png" width="450">
         
 4.	Name the oAuth API ‘payment authorization’ and select ‘Create API’.
  
-        <image 2-3-2>
+        <img src="/madridapiclab2/images/2-3-2.png" width="450">
         
 5.	Scroll down to the oAuth 2 section and set:
 
@@ -70,7 +70,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         - Switch off ‘Enable Refresh Tokens’, ‘Enable Revocation’ and ‘Enable Token Introspection’. 
         - Leave Metadata URL and TLS profile blank. 
 
-              <image 2-3-4>
+              <img src="/madridapiclab2/images/2-3-4.png" width="450">
 
 
 6.	Click save on the top right.
@@ -82,14 +82,14 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         - Required: yes (tick)
         - Type: String
  
-             <image 2-3-5>
+             <img src="/madridapiclab2/images/2-3-5.png" width="450">
 
 9.	Click save on the top right.
 10.	Scroll to the ‘paths’ section of the API. 
 11.	Expand the GET /oauth2/authorize
 12.	Click ‘Add Parameter’ and select ‘payment_id’.
 
-           <image 2-3-6>
+           <img src="/madridapiclab2/images/2-3-6.png" width="450">
            
 13.	Click save on the top right.
 
@@ -97,7 +97,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 1.	Press ‘All APIs’ at the top to return to the list of APIs
 2.	Click on the payments API to go in and see the details. 
  
-        <image 2-4-1>
+        <img src="/madridapiclab2/images/2-4-1.png" width="450">
 
 3.	Scroll down to the ‘Security Definitions’ section and click the + icon to create a new security definition. Select oAuth, then set:
 
@@ -107,16 +107,16 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         - Token URL: https://example.com (this will be replaced later)
         - Scope Name: payment_approval
 
-        <image 2-4-2>
+        <img src="/madridapiclab2/images/2-4-2.png" width="450">
         
  4.	Scroll down to the ‘Security’ section of the API and you will see that the client ID and the client Secret are the default security measures added to an API unless configured otherwise. We therefore have to specifically add the oAuth 2.0 provider we created to the execute payment operation. Ensure the ‘Security’ section of your API matches the screen shot below.  
  
-        <image 2-4-3>
+        <img src="/madridapiclab2/images/2-4-3.png" width="450">
 
 5.	Scroll down to the ‘Paths section and expand the path for ‘POST payments/{id}/execute’.
 6.	Ensure the security options for the API does not use the ‘API security definitions’ and instead is set to have the ‘payment approval’ oAuth  (note the client ID and client secret should also be unset). 
  
-        <image 2-4-5>
+        <img src="/madridapiclab2/images/2-4-5.png" width="450">
 
 7.	Click save on the top right.
 
@@ -126,10 +126,10 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 3.	Click on the ‘Payments’ product to see the details.
 4.	Scroll down to the APIs section and ensure the ‘payment authorization’ API has already been added. If not, press the plus on the top right of the APIs section and add it.
 
-        <image 2-5-1>
+        <img src="/madridapiclab2/images/2-5-1.png" width="450">
 
 
-        <image 2-5-2>
+        <img src="/madridapiclab2/images/2-5-2.png" width="450">
 
 5.	Click on save on the top right. 
 
@@ -138,30 +138,30 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 2.	Click ‘Add and Manage Targets’
 3.	Select ‘Add IBM Bluemix Target’.
 
-        <image 2-6-1>
+        <img src="/madridapiclab2/images/2-6-1.png" width="450">
 4.	You should already be signed into Bluemix.
 5.	Select the region and space where you previously created your own API Connect instance. Speak to your instructor if you have not yet done this. 
 6.	Select the catalog you would like to use (the recommendation is to use sandbox)
  
-        <image 2-6-2>
+        <img src="/madridapiclab2/images/2-6-2.png" width="450">
         
 7.	On the screen to select the Bluemix application, type a new application name in at the bottom of the screen (e.g. madridApicLab) then press the + to add the application. Then click save. 
 
-        <image 2-6-3>
+        <img src="/madridapiclab2/images/2-6-3.png" width="450">
         
 8.	You are returned back to the main API Connect toolkit page. Select the ‘Publish’ button on the top right again. Select the Bluemix target you just set up.
 
 9.	Check the ‘Publish Application’ only and hit ‘Publish’.
 
-        <image 2-6-4>
+        <img src="/madridapiclab2/images/2-6-4.png" width="450">
 
 10.	Once published, you will see a ‘Successfully published application’ message. 
 
-        <image 2-6-5>
+        <img src="/madridapiclab2/images/2-6-5.png" width="450">
 
 
 11.	Select the ‘Publish’ button on the top right again. Select the Bluemix target you set up.
 
 12.	Select ‘Stage or Publish products’, then ‘Select specific products’ and choose the ‘payments’ product. 
 
-        <image 2-6-6>
+        <img src="/madridapiclab2/images/2-6-6.png" width="450">
