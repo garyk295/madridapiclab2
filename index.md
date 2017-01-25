@@ -92,3 +92,18 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
            <image 2-3-6>
            
 13.	Click save on the top right.
+
+### 2.4 Securing the Payments API with the oAuth provider
+1.	Press ‘All APIs’ at the top to return to the list of APIs
+2.	Click on the payments API to go in and see the details. 
+ 
+        <image 2-4-1>
+
+3.	Scroll down to the ‘Security Definitions’ section and click the + icon to create a new security definition. Select oAuth, then set:
+
+        - Name: payment approval
+        - Flow: Access Code
+        - Authorization URL: https://example.com (this will be replaced later)
+        - Token URL: https://example.com (this will be replaced later)
+        - Scope Name: payment_approval
+
