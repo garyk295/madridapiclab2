@@ -282,4 +282,4 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 
 Here is an example:
         
-                https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/authorize?response_type=code&scope=payment_approval&payment_id=999&client_id=dcebcce4-91ae-4af4-9c14-c812e1677937&redirect_uri=https://example.com/redirect
+        https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/authorize?response_type=code&scope=payment_approval&payment_id=999&client_id=dcebcce4-91ae-4af4-9c14-c812e1677937&redirect_uri=https://example.com/redirect
