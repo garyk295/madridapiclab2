@@ -219,7 +219,9 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 12.	Select ‘Stage or Publish products’, then ‘Select specific products’ and choose the ‘payments’ product. 
 
       <img src="/madridapiclab2/images/2-6-6.png" width="450">
-      
+ 
+13.	You will see a message saying ‘Successfully published products’ on the top left.
+ 
 ### 2.7 Registering an app on the developer portal
 1.	Go to your developer portal and sign in using your IBM ID. It may ask you to create an ‘organization’, you can name this anything you like then click ‘Submit. 
 2.	Click on ‘Apps’ in the top menu bar
@@ -239,3 +241,17 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 2.	Click on ‘Subscribe’ and select the radio button to confirm you want to subscribe your ‘madridApicOAuthApp’ app to the Payments API product. 
 
         <image 2-8-2>
+
+### 2.9 Calling the Payments API to reserve the payment
+1.	On the left hand side, click on the payment API to expand the operations
+2.	Click on the POST /payments API
+3.	Scroll down until you can see the tester for this API on the right hand side
+4.	In the client ID field drop down, select the ‘madridApicOAuthApp’ and enter your client secret from step 2.7.7. 
+5.	In the body enter 
+
+                {
+                  "amount": 1000,
+                  "beneficiary": "John Doe"
+                }
+
+        <image 2-9-1>
