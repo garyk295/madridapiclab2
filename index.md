@@ -231,16 +231,16 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 6.	Click ‘Submit’ 
 7.	Click to show the client secret and client id and note these down somewhere (they will be needed later).
 
-        <image 2-7-1>
+        <image 2-7-1
 
 ### 2.8 Subscribing your oAuth application to the API
 1.	Press the ‘API Products’ button in the menu bar and click on payments 
  
-        <image 2-8-1>
+        <image 2-8-1
 
 2.	Click on ‘Subscribe’ and select the radio button to confirm you want to subscribe your ‘madridApicOAuthApp’ app to the Payments API product. 
 
-        <image 2-8-2>
+        <image 2-8-2
 
 ### 2.9 Calling the Payments API to reserve the payment
 1.	On the left hand side, click on the payment API to expand the operations
@@ -254,4 +254,4 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
                   "beneficiary": "John Doe"
                 }
 
-        <image 2-9-1>
+<image 2-9-1
