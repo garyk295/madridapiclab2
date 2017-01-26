@@ -57,7 +57,7 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
    <img src="/madridapiclab2/images/2-2-3.png" width="450">
         
-
+6.	Click on the 'All APIs' buton on the top left to return back to the main screen.
 
 ### 2.3 Creating the oAuth provider
 This part of the lab will walk you through the steps required to secure the payments API using oAuth. 
@@ -124,11 +124,11 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         - Flow: Access Code
         - Authorization URL: https://example.com (this will be replaced later)
         - Token URL: https://example.com (this will be replaced later)
-        - Scope Name: payment_approval
+        - Add a scope using the (+), scope name: payment_approval
 
      <img src="/madridapiclab2/images/2-4-2.png" width="450">
         
- 4.	Scroll down to the ‘Security’ section of the API and you will see that the client ID and the client Secret are the default security measures added to an API unless configured otherwise. We therefore have to specifically add the oAuth 2.0 provider we created to the execute payment operation. Ensure the ‘Security’ section of your API matches the screen shot below.  
+ 4.	Scroll down to the ‘Security’ section of the API and you will see that the client ID and the client Secret are the default security measures added to each operation of the API unless configured otherwise. We therefore have to specifically add the oAuth 2.0 provider we created to the execute payment operation. Ensure the ‘Security’ section of your API matches the screen shot below.  
  
       <img src="/madridapiclab2/images/2-4-3.png" width="450">
 
@@ -140,10 +140,10 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 7.	Click save on the top right.
 
 ### 2.5 Adding the oAuth provider to the product
-1.	Press ‘All APIs’ at the top to return to the list of APIs
-2.	Click on products
+1.	Press ‘All APIs’ at the top to return to the list of APIs.
+2.	Click on products.
 3.	Click on the ‘Payments’ product to see the details.
-4.	Scroll down to the APIs section and ensure the ‘payment authorization’ API has already been added. If not, press the plus on the top right of the APIs section and add it.
+4.	Scroll down to the APIs section and press the (+) button. Check the ‘payment authorization’ API then press 'apply' to add it to the product.
 
       <img src="/madridapiclab2/images/2-5-1.png" width="450">
 
@@ -161,7 +161,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
       
 4.	You should already be signed into Bluemix.
 5.	Select the region and space where you previously created your own API Connect instance. Speak to your instructor if you have not yet done this. 
-6.	Select the catalog you would like to use (the recommendation is to use sandbox)
+6.	Select the catalog you would like to use (the recommendation is to use sandbox) and click 'next'.
  
       <img src="/madridapiclab2/images/2-6-2.png" width="450">
         
