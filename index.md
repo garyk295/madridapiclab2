@@ -370,3 +370,5 @@ Ensure the spaces between the different parts of the command are correct.
             "id": 5
             }
 
+
+Congratulations, you have successfully  configured the payments API to use oAuth 2.0. 
