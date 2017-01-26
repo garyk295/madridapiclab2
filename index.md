@@ -307,7 +307,9 @@ The authorization code from below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczR
 
 2.11 Executing the payment using the access token 
 1.	Return back to the developer portal in your web browser and go back to the payments API product.
+
 2.	Expand the payment authorization API and select the POST /oauth2/token operation 
+
 3.	On the right hand side you will see a URL in a section named ‘Try this operation’. Take note of this URL, it will look something like
 
         https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/lab/payment-authorization/oauth2/token
