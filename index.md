@@ -231,16 +231,16 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 6.	Click ‘Submit’ 
 7.	Click to show the client secret and client id and note these down somewhere (they will be needed later).
 
-      <img src="/madridapiclab2/images/2-7-1" width="450">
+      <img src="/madridapiclab2/images/2-7-1.png" width="450">
 
 ### 2.8 Subscribing your oAuth application to the API
 1.	Press the ‘API Products’ button in the menu bar and click on payments 
  
-        <img src="/madridapiclab2/images/2-8-1" width="450">
+      <img src="/madridapiclab2/images/2-8-1.png" width="450">
 
 2.	Click on ‘Subscribe’ and select the radio button to confirm you want to subscribe your ‘madridApicOAuthApp’ app to the Payments API product. 
 
-      <img src="/madridapiclab2/images/2-8-2" width="450">
+      <img src="/madridapiclab2/images/2-8-2.png" width="450">
 
 ### 2.9 Calling the Payments API to reserve the payment
 1.	On the left hand side, click on the payment API to expand the operations
@@ -255,11 +255,11 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
                 }
 
 
-      <img src="/madridapiclab2/images/2-9-1" width="450">
+      <img src="/madridapiclab2/images/2-9-1.png" width="450">
 
 6.	Click the ‘Call Operation’ button and you should observe the response. The response will have the request payload in it plus an ID. Take note of this ID (payment_id) as it will be required later. 
  
-      <img src="/madridapiclab2/images/2-9-2" width="450">
+      <img src="/madridapiclab2/images/2-9-2.png" width="450">
 
 ### 2.10 Retrieving the authorization code 
 1.	On the left hand side, click on the payment authorization API to expand the operations
@@ -270,7 +270,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 
 
 
-      <img src="/madridapiclab2/images/2-10-1" width="450">
+      <img src="/madridapiclab2/images/2-10-1.png" width="450">
         
         
 3.	You will call the URL you took note of via a web browser, however we must append some parameters to it in order to properly authenticate and get the access token. We must add
@@ -290,12 +290,12 @@ Here is an example:
 5.	Enter username=johndoe and password=password, the click login
  
 
-      <img src="/madridapiclab2/images/2-10-2" width="450">
+      <img src="/madridapiclab2/images/2-10-2.png" width="450">
 
 
 6.	Click ‘approve payment’
  
-      <img src="/madridapiclab2/images/2-10-3" width="450">
+      <img src="/madridapiclab2/images/2-10-3.png" width="450">
 
 7.	You will be redirected to ‘example.com/redirect’. Appended to the URL there will be the authorization code you require to obtain the access token in the next step. Copy this code and keep note of it. 
 
@@ -303,7 +303,7 @@ The authorization code from below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczR
 
         https://example.com/redirect?code=AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
 
-  <img src="/madridapiclab2/images/2-10-4" width="450">
+  <img src="/madridapiclab2/images/2-10-4.png" width="450">
 
 ### 2.11 Retrieving the access token 
 
@@ -348,17 +348,17 @@ Ensure the spaces between the different parts of the command are correct.
 1.	Return back to the developer portal in your web browser and go back to the payments API product.
 2.	Expand the payments API and select the POST /payments/{id}/execute operation.
     
-      <img src="/madridapiclab2/images/2-12-1" width="450">
+      <img src="/madridapiclab2/images/2-12-1.png" width="450">
         
 3.	Scroll down until you can see the ‘Identification’ section. Select you app name from the ‘Client ID’ drop down and enter your client secret (See step 2.7.7).
  
-      <img src="/madridapiclab2/images/2-12-2" width="450">
+      <img src="/madridapiclab2/images/2-12-2.png" width="450">
  
 4.	Scroll down until you can see the ‘Authorization’ section in the tester on the right hand side. Enter your access token (see step 2.11.6). 
 
 5.	Scroll further down and enter the payment id you are executing in the id field (see step 2.9.6)
 
-      <img src="/madridapiclab2/images/2-12-3" width="450">
+      <img src="/madridapiclab2/images/2-12-3.png" width="450">
         
 6.	Click ‘Call Operation’ to execute the call. The response should be the payment_id you specified now with an ‘executed’ state. 
 
