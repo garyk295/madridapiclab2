@@ -274,6 +274,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         
         
 3.	You will call the URL you took note of via a web browser, however we must append some parameters to it in order to properly authenticate and get the access token. We must add
+
         - response_type=code
         - scope=payment_approval
         - payment_id= see step 2.9.6
