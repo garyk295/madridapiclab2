@@ -254,4 +254,20 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
                   "beneficiary": "John Doe"
                 }
 
-<image 2-9-1
+
+        <image 2-9-1
+
+6.	Click the ‘Call Operation’ button and you should observe the response. The response will have the request payload in it plus an ID. Take note of this ID (payment_id) as it will be required later. 
+ 
+        <image 2-9-2
+
+### 2.10 Retrieving the authorization code 
+1.	On the left hand side, click on the payment authorization API to expand the operations
+2.	Click on the GET /oauth2/authorize operation and you will see a URL in a section named ‘Try this operation’. Take note of this URL, it will look something like
+
+                https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/lab/payment-authorization/oauth2/authorize
+
+
+
+
+        <image 2-10-1>
