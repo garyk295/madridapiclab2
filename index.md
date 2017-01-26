@@ -284,3 +284,21 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 Here is an example:
         
         https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/authorize?response_type=code&scope=payment_approval&payment_id=999&client_id=dcebcce4-91ae-4af4-9c14-c812e1677937&redirect_uri=https://example.com/redirect
+        
+        
+4.	Now call you constructed in the previous step from your web browser (just like you were visiting http://ibm.com). You will be redirected to the external authorization and authentications login page 
+5.	Enter username=John Doe and password=password, the click login
+ 
+
+        <image 2-10-2>
+
+
+6.	Click ‘approve payment’
+ 
+        <image 2-10-3>
+
+7.	You will be redirected to ‘example.com/redirect’. Appended to the URL there will be the authorization code you require to obtain the access token in the next step. Copy this code and keep note of it. 
+
+The authorization code from below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
+
+        https://example.com/redirect?code=AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
