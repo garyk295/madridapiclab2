@@ -319,9 +319,9 @@ The authorization code from below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczR
 
 5.	Before we can call the command to get the access token, we need to add a few parameters to the command. We must add:
 
-- Client ID= see step 2.7.7
-- Client Secret =see step 2.7.7
-- grant_type=authorization_code
-- redirect_uri=https://example.com/redirect
-- code= see step 2.10.7
+        - Client ID= see step 2.7.7
+        - Client Secret =see step 2.7.7
+        - grant_type=authorization_code
+        - redirect_uri=https://example.com/redirect
+        - code= see step 2.10.7
 
