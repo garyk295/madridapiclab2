@@ -122,9 +122,38 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 
         - Name: payment approval
         - Flow: Access Code
-        - Authorization URL: https://example.com (this will be replaced later)
-        - Token URL: https://example.com (this will be replaced later)
+        - Authorization URL: see below
+        - Token URL: see below
         - Add a scope using the (+), scope name: payment_approval
+
+        Authorization URL is made up of:
+
+        https://<bluemix host region url>/<organization-space_name>/<catalog_name>/payment-authorization/oauth2/authorize
+
+        For example, for:
+        United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
+        Organization: gary.kean@uk.ibm.com
+        Space: APIConnect
+        Catalog: workshop-demo
+
+        the Authorization URL would look like this: 
+        https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/authorize
+
+        Token URL is made up of:
+
+        https://<bluemix host region url>/<organization-space_name>/<catalog_name>/payment-authorization/oauth2/token
+
+        For example, for:
+        United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
+        Organization: gary.kean@uk.ibm.com
+        Space: APIConnect
+        Catalog: workshop-demo
+
+        the Token URL would look like this: 
+        https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/token
+
+        You can double check these URLs in the developer portal later once you have published your API.
+
 
      <img src="/madridapiclab2/images/2-4-2.png" width="450">
         
