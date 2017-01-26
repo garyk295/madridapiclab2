@@ -8,9 +8,25 @@ This section can be skipped if you already have a Bluemix account and an API Con
 [Setup IBM API Connect Instructions](https://ibm-apiconnect.github.io/pot/lab0.html) 
 
 ## Part 2: Secure and publish API
+### 2.1 Create a directory and clone the API Connect project from github
+1.	Navigate to a root folder on your laptop where you would like to keep your apic project
+2.	Run the following command to create a directory
 
-### 2.1 Create a directory and download the loopback project from github (placeholder)
+                        mkdir madridApic
+                        
+3.	Change to the directory you just created by running the following command
 
+                        cd madridApic
+                       
+4.     Clone the API Connect project from github by running the following command
+
+                        git clone https://github.com/garyk295/madridapiclab2code
+
+
+5.	Change to the directory you just created by running the following command
+
+                        cd madridapiclab2code
+                        
 ### 2.2 Exploring the ‘payments’ loopback model
 1.	Run the following command to start the API Connect toolkit:
 
