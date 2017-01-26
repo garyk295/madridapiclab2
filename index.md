@@ -219,3 +219,23 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 12.	Select ‘Stage or Publish products’, then ‘Select specific products’ and choose the ‘payments’ product. 
 
       <img src="/madridapiclab2/images/2-6-6.png" width="450">
+      
+### 2.7 Registering an app on the developer portal
+1.	Go to your developer portal and sign in using your IBM ID. It may ask you to create an ‘organization’, you can name this anything you like then click ‘Submit. 
+2.	Click on ‘Apps’ in the top menu bar
+3.	Click on ‘Create new app’
+4.	Call the app ‘madridApicOAuthApp’
+5.	In the ‘OAuth Redirect URI’ field enter ‘https://example.com/redirect’
+6.	Click ‘Submit’ 
+7.	Click to show the client secret and client id and note these down somewhere (they will be needed later).
+
+        <image 2-7-1>
+
+### 2.8 Subscribing your oAuth application to the API
+1.	Press the ‘API Products’ button in the menu bar and click on payments 
+ 
+        <image 2-8-1>
+
+2.	Click on ‘Subscribe’ and select the radio button to confirm you want to subscribe your ‘madridApicOAuthApp’ app to the Payments API product. 
+
+        <image 2-8-2>
