@@ -305,7 +305,8 @@ The authorization code from below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczR
 
         <image 2-10-4>
 
-2.11 Executing the payment using the access token 
+### 2.11 Executing the payment using the access token 
+
 1.	Return back to the developer portal in your web browser and go back to the payments API product.
 
 2.	Expand the payment authorization API and select the POST /oauth2/token operation 
