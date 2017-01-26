@@ -29,7 +29,7 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
          cd madridapiclab2code
 
-6.	Rung the following command to install the required NPM dependencies
+6.	Run the following command to install the required NPM dependencies
 
           npm install 
 
