@@ -28,7 +28,11 @@ This section can be skipped if you already have a Bluemix account and an API Con
 5.	Change to the directory you just created by running the following command
 
          cd madridapiclab2code
-                        
+
+6.	Rung the following command to install the required NPM dependencies
+
+          npm install 
+
 ### 2.2 Exploring the ‘payments’ loopback model
 1.	Run the following command to start the API Connect toolkit:
 
