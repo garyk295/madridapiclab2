@@ -132,7 +132,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 
         https://<bluemix host region url>/<organization-space_name>/<catalog_name>/payment-authorization/oauth2/authorize
 
-        For example, for:
+        For example,
         United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
         Organization: gary.kean@uk.ibm.com
         Space: APIConnect
@@ -158,7 +158,7 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         ````
 
 
-      <img src="/madridapiclab2/images/2-4-2.png" width="450">
+   <img src="/madridapiclab2/images/2-4-2.png" width="450">
         
         
         
