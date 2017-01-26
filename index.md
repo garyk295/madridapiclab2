@@ -126,36 +126,36 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         - Token URL: see below
         - Add a scope using the (+), scope name: payment_approval
 
-        Authorization URL is made up of:
+Authorization URL is made up of:
 
-        https://<bluemix host region url>/<organization-space_name>/<catalog_name>/payment-authorization/oauth2/authorize
+https://<bluemix host region url>/<organization-space_name>/<catalog_name>/payment-authorization/oauth2/authorize
 
-        For example, for:
-        United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
-        Organization: gary.kean@uk.ibm.com
-        Space: APIConnect
-        Catalog: workshop-demo
+For example, for:
+United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
+Organization: gary.kean@uk.ibm.com
+Space: APIConnect
+Catalog: workshop-demo
 
-        the Authorization URL would look like this: 
-        https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/authorize
+the Authorization URL would look like this: 
+https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/authorize
 
-        Token URL is made up of:
+Token URL is made up of:
 
-        https://<bluemix host region url>/<organization-space_name>/<catalog_name>/payment-authorization/oauth2/token
+https://<bluemix host region url>/<organization-space_name>/<catalog_name>/payment-authorization/oauth2/token
 
-        For example, for:
-        United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
-        Organization: gary.kean@uk.ibm.com
-        Space: APIConnect
-        Catalog: workshop-demo
+For example, for:
+United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
+Organization: gary.kean@uk.ibm.com
+Space: APIConnect
+Catalog: workshop-demo
 
-        the Token URL would look like this: 
-        https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/token
+the Token URL would look like this: 
+https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/token
 
-        You can double check these URLs in the developer portal later once you have published your API.
+You can double check these URLs in the developer portal later once you have published your API.
 
 
-     <img src="/madridapiclab2/images/2-4-2.png" width="450">
+      <img src="/madridapiclab2/images/2-4-2.png" width="450">
         
  4.	Scroll down to the ‘Security’ section of the API and you will see that the client ID and the client Secret are the default security measures added to each operation of the API unless configured otherwise. We therefore have to specifically add the oAuth 2.0 provider we created to the execute payment operation. Ensure the ‘Security’ section of your API matches the screen shot below.  
  
