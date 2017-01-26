@@ -18,7 +18,7 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
                         cd madridApic
                        
-4.     Clone the API Connect project from github by running the following command
+4.  Clone the API Connect project from github by running the following command
 
                         git clone https://github.com/garyk295/madridapiclab2code
 
