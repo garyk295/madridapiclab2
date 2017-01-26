@@ -287,7 +287,7 @@ Here is an example:
         
         
 4.	Now call you constructed in the previous step from your web browser (just like you were visiting http://ibm.com). You will be redirected to the external authorization and authentications login page 
-5.	Enter username=John Doe and password=password, the click login
+5.	Enter username=johndoe and password=password, the click login
  
 
         <image 2-10-2>
@@ -302,3 +302,12 @@ Here is an example:
 The authorization code from below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
 
         https://example.com/redirect?code=AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
+
+        <image 2-10-4>
+
+2.11 Executing the payment using the access token 
+1.	Return back to the developer portal in your web browser and go back to the payments API product.
+2.	Expand the payment authorization API and select the POST /oauth2/token operation 
+3.	On the right hand side you will see a URL in a section named ‘Try this operation’. Take note of this URL, it will look something like
+
+        https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/lab/payment-authorization/oauth2/token
