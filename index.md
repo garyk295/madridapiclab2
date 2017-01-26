@@ -133,10 +133,10 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
         https://<bluemix host region url>/<organization-space_name>/<catalog_name>/payment-authorization/oauth2/authorize
 
         For example,
-        United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
-        Organization: gary.kean@uk.ibm.com
-        Space: APIConnect
-        Catalog: workshop-demo
+                United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
+                Organization: gary.kean@uk.ibm.com
+                Space: APIConnect
+                Catalog: workshop-demo
 
         the Authorization URL would look like this: 
         https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/authorize
@@ -145,11 +145,11 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
 
         https://<bluemix host region url>/<organization-space_name>/<catalog_name>/payment-authorization/oauth2/token
 
-        For example, for:
-        United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
-        Organization: gary.kean@uk.ibm.com
-        Space: APIConnect
-        Catalog: workshop-demo
+        For example,
+                United Kingdom Bluemix URL: api.eu.apiconnect.ibmcloud.com
+                Organization: gary.kean@uk.ibm.com
+                Space: APIConnect
+                Catalog: workshop-demo
 
         the Token URL would look like this: 
         https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/token
