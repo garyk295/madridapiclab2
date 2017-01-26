@@ -1,0 +1,48 @@
+{
+  "name": "payment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "beneficiary": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "execute_payment": {
+      "isStatic": false,
+      "accepts": [
+        {"arg": "id", "type": "number", "required": true}
+      ],
+      "returns": [
+        {
+          "arg": "payment",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "http": [
+        {
+          "path": "/execute",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}

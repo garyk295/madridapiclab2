@@ -1,0 +1,112 @@
+paths:
+  /payments:
+    post:
+      tags:
+        - payment
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: payment.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/payment'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/payment'
+      deprecated: false
+  '/payments/{id}/execute':
+    post:
+      tags:
+        - payment
+      operationId: payment.prototype.execute_payment
+      parameters:
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+definitions:
+  payment:
+    properties:
+      amount:
+        type: number
+        format: double
+      beneficiary:
+        type: string
+      state:
+        type: string
+      id:
+        type: number
+        format: double
+    required:
+      - amount
+      - beneficiary
+    additionalProperties: false
+  x-any:
+    properties: {}
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: payments
+  version: 1.0.0
+  title: payments
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: >-
+          https://apiconnect-caf3f877-ec6a-432a-8d16-84719a298c82.cmarcoliukibmcom-sandpit.apic.eu-gb.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+          cache-response: no-cache
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

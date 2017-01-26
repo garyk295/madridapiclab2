@@ -1,0 +1,12 @@
+{
+  "ids": {
+    "payment": 5
+  },
+  "models": {
+    "payment": {
+      "1": "{\"amount\":14.67076069,\"beneficiary\":\"tuolreja\",\"id\":1}",
+      "3": "{\"amount\":22.16957726,\"beneficiary\":\"kicji\",\"state\":\"MA\",\"id\":3}",
+      "4": "{\"amount\":22.16957726,\"beneficiary\":\"kicji\",\"state\":\"pending\",\"id\":4}"
+    }
+  }
+}
