@@ -344,5 +344,29 @@ Ensure the spaces between the different parts of the command are correct.
         { "token_type":"bearer", "access_token":"AAEkNTc3YTM5MzMtN2YyMC00NTdlLWI2YWYtZjBjZTNlZTVjZGRjqROf_74P_zTkHshgnZPpiIbWN6_JJyS9MzxPlkD17aRufXpdyaj4D3fgkla-JTRq7UV69n97wpjV0l9odtJeuYYRReX--UhPcyRZXVOVxnU", "expires_in":3600, "scope":"payment_approval" }
         
         
+### 2.12 Executing the payment using the access token 
+1.	Return back to the developer portal in your web browser and go back to the payments API product.
+2.	Expand the payments API and select the POST /payments/{id}/execute operation.
+    
+        <image 2-12-1>
         
+3.	Scroll down until you can see the ‘Identification’ section. Select you app name from the ‘Client ID’ drop down and enter your client secret (See step 2.7.7).
+ 
+        <image 2-12-2>
+ 
+4.	Scroll down until you can see the ‘Authorization’ section in the tester on the right hand side. Enter your access token (see step 2.11.6). 
+
+5.	Scroll further down and enter the payment id you are executing in the id field (see step 2.9.6)
+
+        <image 2-12-3>
         
+6.	Click ‘Call Operation’ to execute the call. The response should be the payment_id you specified now with an ‘executed’ state. 
+
+            
+            {
+            "amount": 1000,
+            "beneficiary": "John Doe",
+            "state": "executed",
+            "id": 5
+            }
+
