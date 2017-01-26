@@ -53,7 +53,6 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
    <img src="/madridapiclab2/images/2-2-3.png" width="450">
         
-6.	Go back to the terminal and press ctrl+c to close the API Connect toolkit. Close the web browser. 
 
 
 ### 2.3 Creating the oAuth provider
@@ -63,19 +62,16 @@ a. POST / payments – this operation is secured with a client secret and ID onl
 
 b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (since it’s the operation which executes the payment and finalises the financial transition). 
 
-1.	Navigate to the ‘payment_apis’ folder on the command line or terminal
-2.	Run the following command to start the API Connect toolkit:
 
-        apic edit 
-3.	Click on ‘Add’ and select ‘OAuth 2.0 Provider API’.
+1.	Click on ‘Add’ and select ‘OAuth 2.0 Provider API’.
 
      <img src="/madridapiclab2/images/2-3-1.png" width="450">
         
-4.	Name the oAuth API ‘payment authorization’ and select ‘Create API’.
+2.	Name the oAuth API ‘payment authorization’ and select ‘Create API’.
  
      <img src="/madridapiclab2/images/2-3-2.png" width="450">
         
-5.	Scroll down to the oAuth 2 section and set:
+3.	Scroll down to the oAuth 2 section and set:
 
         - Client Type: Confidential 
         - Scope Name: payment_approval (delete the other 2 scopes)
@@ -92,9 +88,9 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
       <img src="/madridapiclab2/images/2-3-4.png" width="450">
 
 
-6.	Click save on the top right.
-7.	Scroll down until you see the section to declare parameters.
-8.	Click the plus icon to create a new parameter, set:
+4.	Click save on the top right.
+5.	Scroll down until you see the section to declare parameters.
+6.	Click the plus icon to create a new parameter, set:
 
         - Name: payment_id
         - Located in: Query
@@ -103,14 +99,14 @@ b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (sinc
  
       <img src="/madridapiclab2/images/2-3-5.png" width="450">
 
-9.	Click save on the top right.
-10.	Scroll to the ‘paths’ section of the API. 
-11.	Expand the GET /oauth2/authorize
-12.	Click ‘Add Parameter’ and select ‘payment_id’.
+7.	Click save on the top right.
+8.	Scroll to the ‘paths’ section of the API. 
+9.	Expand the GET /oauth2/authorize
+10.	Click ‘Add Parameter’ and select ‘payment_id’.
 
       <img src="/madridapiclab2/images/2-3-6.png" width="450">
            
-13.	Click save on the top right.
+11.	Click save on the top right.
 
 ### 2.4 Securing the Payments API with the oAuth provider
 1.	Press ‘All APIs’ at the top to return to the list of APIs
