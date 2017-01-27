@@ -22,7 +22,8 @@ The components in this lab are:
   - The payments API is deployed on API Connect has 2 operations
       - The first operation is 'POST /payments' which allows a third party provider to initiate a payment on behalf of a user. Note this puts the payment in a 'pending' state and returns back a payment ID to the third party provider. This operation is secured by API keys only (no oAuth). 
       - The second  operation is 'POST /payments/{id}/execute' which allows the third party to finalise a payment and set it to an 'executed' state using the payment ID issued in the previous API call. This operation is secured by oAuth, therefore the user has to be redirected by the third party to the financial institution so they can sign in and confirm they authorize the third party to make the payment on their behalf. The oAUth flow handles the interaction between the user, third party provider and financial institution and it uses authorization codes and access tokens to delegate authorization from the user to the third party provider.  
-      
+   - The Payments API is provided for you in this lab. 
+   
 - **Authentication and Authorization Server**
    - This is the Authentication and Authorization Server (AAS) of the financial institution hosting the payments API. 
    - The user is redirected to the AAS of the financial institution to sign-in confirm they are happy to give the third party provider permission to make the payment. 
@@ -36,6 +37,8 @@ The components in this lab are:
    - The oAuth flow has been enhanced slightly in this lab to include the passing of a payment ID in the oAuth flow. This is an important addition because in this scenario the user doesn't want to delegate authorization of a full 'scope' to the third party. The scope being used is 'payment approval' which means the user would be authorizing the third party to make ANY payment on their behalf. With the addition of the payment ID it means the user is authorizing the third party to make only the single payment being processed and not ANY payment. In this lab the payment ID is included in the URL as a parameter being passed between the different components. A more elegant and secure solution would be to enrich the access token to include the payment ID. API Connect has this capability and more information can be found on the Knowledge Center.
    
    [oAuth Metadata](https://www.ibm.com/support/knowledgecenter/en/SSMNED_5.0.0/com.ibm.apic.toolkit.doc/con_metadata.html) 
+   
+   - In this lab you will build the oAuth 2.0 provider API. 
 
 <img src="/madridapiclab2/images/accesscodeflow.png" width="800">
 
