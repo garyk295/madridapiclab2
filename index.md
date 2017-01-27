@@ -73,6 +73,8 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
 ### 2.1 Create a directory and clone the API Connect project from github
 
+This section will guide you through the set up of the base API Connect project on your laptop. You will need to have all the prerequisites specified in part 1 in order to perform these steps. 
+
 1.	Navigate to a root folder on your laptop where you would like to keep your apic project
 2.	Run the following command to create a directory
 
@@ -95,7 +97,10 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
           npm install 
 
-### 2.2 Exploring the ‘payments’ loopback model
+### 2.2 Exploring the Payments API
+
+This section will help you explore the payments API that is provided for you and the 2 operations it includes. The API is based on loopback and has a model named 'payment'. An in memory data store is used to store the data associated with the model. It is worth mentioning that if you have an API based on loopback then it has a Node.Js application (microservice) associated with it, as well as the API. This is an important consideration when it comes to deploying your API later, as you have to deploy the application as well as the API product. 
+
 1.	Run the following command to start the API Connect toolkit:
 
         
@@ -121,13 +126,9 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
 6.Click on the 'All APIs' buton on the top left to return back to the main screen.
 
-### 2.3 Creating the oAuth provider
-This part of the lab will walk you through the steps required to secure the payments API using oAuth. 
+### 2.3 Creating the oAuth 2.0 provider
 
-   - a. POST / payments – this operation is secured with a client secret and ID only since it only reserves the payment (i.e. places it in a pending state). 
-
-   - b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (since it’s the operation which executes the payment and finalises the financial transition). 
-
+This section will guide you through the creation and configuration of the oAuth 2.0 provider. The oAuth 2.0 provider will use the 'Access Code' flow and will use a redirect to the Authentication and Authorization Server of the financial institution to confirm the users identify and allow them to confirm they want to allow the third party to make payments on their behalf.
 
 1.	Click on ‘Add’ and select ‘OAuth 2.0 Provider API’.
 
@@ -175,6 +176,13 @@ This part of the lab will walk you through the steps required to secure the paym
 11.	Click save on the top right.
 
 ### 2.4 Securing the Payments API with the oAuth provider
+
+This part of the lab will walk you through the steps required to secure the payments API using oAuth 2.0 provider you created in the previous section. 
+
+   - a. POST / payments – this operation is secured with a client secret and ID only since it only initiates the payment (i.e. places it in a pending state). 
+
+   - b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (since it’s the operation which executes the payment and finalises the financial transition). 
+   
 1.	Press ‘All APIs’ at the top to return to the list of APIs
 2.	Click on the payments API to go in and see the details. 
  
@@ -237,6 +245,9 @@ This part of the lab will walk you through the steps required to secure the paym
 7.Click save on the top right.
 
 ### 2.5 Adding the oAuth provider to the product
+
+In API Connect you package your APIs into products and this is how they are consumed. This section will guide you through packaging up the payments API and the payment authorization API into a single product. 
+
 1.	Press ‘All APIs’ at the top to return to the list of APIs.
 2.	Click on products.
 3.	Click on the ‘Payments’ product to see the details.
@@ -250,6 +261,9 @@ This part of the lab will walk you through the steps required to secure the paym
 5.	Click on save on the top right. 
 
 ### 2.6 Publish product to Bluemix
+
+Now we have a product, we are ready to publish. In this lab, API Connect on Bluemix is our deployment target. This section will show you how to add Bluemix as a target and how to publish your API and loopback application (microservice). 
+
 1.	Hit ‘Publish’ on the top right of the API Connect toolkit
 2.	Click ‘Add and Manage Targets’
 3.	Select ‘Add IBM Bluemix Target’.
@@ -286,17 +300,30 @@ This part of the lab will walk you through the steps required to secure the paym
 13.	You will see a message saying ‘Successfully published products’ on the top left.
  
 ### 2.7 Registering an app on the developer portal
-1.	Go to your developer portal and sign in using your IBM ID. It may ask you to create an ‘organization’, you can name this anything you like then click ‘Submit. 
+
+This is the first part of the lab where we are changing our role (or perspective). Up until now we have been assuming the role of a developer in the financial institution who has published an API to allow third party providers to make payments on behalf of its customers (users). 
+
+Now we will be assuming the role of a third party developer who is building an application to make payments on behalf of the banks customers. 
+
+The developer portal is a key part of API Connect and is where consumers of APIs go to discover and subscribe to APIs. In order to subscribe to an API you must first create an application. 
+
+As a third party developer you will visit the developer portal of the financial institution and register an application. 
+
+
+1.	Go to your developer portal and sign in using your IBM ID. It may ask you to create an ‘organization’, call this 'third party' then click ‘Submit. 
 2.	Click on ‘Apps’ in the top menu bar
 3.	Click on ‘Create new app’
 4.	Call the app ‘madridApicOAuthApp’
-5.	In the ‘OAuth Redirect URI’ field enter ‘https://example.com/redirect’
+5.	In the ‘OAuth Redirect URI’ field enter ‘https://example.com/redirect’ (this specifies where the bank will redirect the user to after oAuth authentication - it's important it matches the redirect URI specified later)  
 6.	Click ‘Submit’ 
 7.	Click to show the client secret and client id and note these down somewhere (they will be needed later).
 
       <img src="/madridapiclab2/images/2-7-1.png" width="450">
 
 ### 2.8 Subscribing your oAuth application to the API
+
+As a third party developer, in the previous step you registered an application in the developer portal of the financial institution.  You will now subscribe the application you created to the payments API product. This means you can now start to call the payments and payment authorization APIs. 
+
 1.	Press the ‘API Products’ button in the menu bar and click on payments 
  
       <img src="/madridapiclab2/images/2-8-1.png" width="450">
@@ -305,7 +332,15 @@ This part of the lab will walk you through the steps required to secure the paym
 
       <img src="/madridapiclab2/images/2-8-2.png" width="450">
 
-### 2.9 Calling the Payments API to reserve the payment
+### 2.9 Calling the Payments API to initiate the payment
+
+Everything is now set up from a financial institution perspective (the APIs are published) and from a third party provider perspective (an application is registered and subscribed to the APIs). It is therefore time to start testing the end-to-end flow of making a payment. 
+
+Note in reality these the end-to-end payment process would be orchestrated by an application, however for the purposes of the lab, we will do them manually to understand the sequence of events. 
+
+The first step is to initiate the payment by calling the POST /payments API.
+
+
 1.	On the left hand side, click on the payment API to expand the operations
 2.	Click on the POST /payments API
 3.	Scroll down until you can see the tester for this API on the right hand side
