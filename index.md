@@ -57,7 +57,7 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
 
 
-6.	Click on the 'All APIs' buton on the top left to return back to the main screen.
+6.Click on the 'All APIs' buton on the top left to return back to the main screen.
 
 ### 2.3 Creating the oAuth provider
 This part of the lab will walk you through the steps required to secure the payments API using oAuth. 
