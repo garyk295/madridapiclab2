@@ -288,6 +288,7 @@ Here is an example:
         
         
 4.Now call you constructed in the previous step from your web browser (just like you were visiting http://ibm.com). You will be redirected to the external authorization and authentications login page 
+
 5.Enter 
 
 - username=johndoe 
