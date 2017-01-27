@@ -65,7 +65,7 @@ The sequence of events to make a payment is:
 
 ## Part 1: Set up API Connect
 
-This section can be skipped if you already have a Bluemix account and an API Connect service provisioned. If not, please follow the link below and complete ‘Lab 0 - Setup IBM API Connect’. Once complete, return to this document and move onto part 2. 
+This section can be skipped if you already have the API Connect Toolkit installed locally, and a Bluemix account with an API Connect service provisioned. If not, please follow the link below and complete ‘Lab 0 - Setup IBM API Connect’. Once complete, return to this document and move onto part 2. 
 
 [Setup IBM API Connect Instructions](https://ibm-apiconnect.github.io/pot/lab0.html) 
 
@@ -148,9 +148,7 @@ This section will guide you through the creation and configuration of the oAuth 
         - Authentication URL: https://thinkibm-services.mybluemix.net/auth
         - TLS Profile: leave blank
         - Authorize application user using: Authenticated
-        - Time to live: 3597
-        - Switch off ‘Enable Refresh Tokens’, ‘Enable Revocation’ and ‘Enable Token Introspection’. 
-        - Leave Metadata URL and TLS profile blank. 
+        -Leave all other setting as default
 
       <img src="/madridapiclab2/images/2-3-4.png" width="450">
 
