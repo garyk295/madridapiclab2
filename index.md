@@ -34,7 +34,7 @@ The components in this lab are:
    - The Payment Authorization API (oAuth flow) handles the interaction between the user, third party provider and financial institution and it uses authorization codes and access tokens to delegate authorization from the user to the third party provider.  
    - 'Access Code' is the oAuth 2.0 flow used in the Payment Authorization API.
 
-<img src="/madridapiclab2/images/acesscodeflow.png" width="800">
+<img src="/madridapiclab2/images/accesscodeflow.png" width="800">
 
 
 
