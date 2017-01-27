@@ -11,6 +11,9 @@ Before we go further, let's take a look at the definition of oAuth 2.0:
    between the resource owner and the HTTP service, or by allowing the
    third-party application to obtain access on its own behalf."
 
+The following diagram outlines the key interactions that we will be building in this lab.
+
+<img src="/madridapiclab2/images/arc_diag.png" width="800">
 
 The components we have in this lab are:
 
@@ -31,9 +34,9 @@ The components we have in this lab are:
    - The Payment Authorization API (oAuth flow) handles the interaction between the user, third party provider and financial institution and it uses authorization codes and access tokens to delegate autorisation from the user to the third party provider.  
    - 'Access Code' is the oAuth 2.0 flow used in the Payment Authorization API.
 
-<img src="/madridapiclab2/images/acesscodeflow.png" width="900">
+<img src="/madridapiclab2/images/acesscodeflow.png" width="800">
 
-<img src="/madridapiclab2/images/arc_diag.png" width="900">
+
 
 
 ## Part 1: Set up API Connect
