@@ -20,7 +20,7 @@ This section can be skipped if you already have a Bluemix account and an API Con
 
 [Setup IBM API Connect Instructions](https://ibm-apiconnect.github.io/pot/lab0.html) 
 
-## Part 2: Secure and publish API
+## Part 2: Secure and test the Payments API
 
 ### 2.1 Create a directory and clone the API Connect project from github
 
