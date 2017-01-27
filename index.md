@@ -3,6 +3,13 @@
 
 In this lab you will learn how to secure an API using oAuth 2.0.
 
+oAuth 2.0 is defined as:
+
+"The OAuth 2.0 authorization framework enables a third-party
+   application to obtain limited access to an HTTP service, either on
+   behalf of a resource owner by orchestrating an approval interaction
+   between the resource owner and the HTTP service, or by allowing the
+   third-party application to obtain access on its own behalf."
 
 <img src="/madridapiclab2/images/arc_diag.png" width="900">
 
