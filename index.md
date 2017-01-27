@@ -62,9 +62,9 @@ This section can be skipped if you already have a Bluemix account and an API Con
 ### 2.3 Creating the oAuth provider
 This part of the lab will walk you through the steps required to secure the payments API using oAuth. 
 
-        - a. POST / payments – this operation is secured with a client secret and ID only since it only reserves the payment (i.e. places it in a pending state). 
+   - a. POST / payments – this operation is secured with a client secret and ID only since it only reserves the payment (i.e. places it in a pending state). 
 
-        - b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (since it’s the operation which executes the payment and finalises the financial transition). 
+   - b. POST payments/{id}/execute – this operation is secured with oAuth 2.0 (since it’s the operation which executes the payment and finalises the financial transition). 
 
 
 1.	Click on ‘Add’ and select ‘OAuth 2.0 Provider API’.
