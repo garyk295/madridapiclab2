@@ -32,7 +32,10 @@ The components in this lab are:
 
 - **The Payment Authorization (oAuth 2.0) API**: 
    - The Payment Authorization API (oAuth flow) handles the interaction between the user, third party provider and financial institution and it uses authorization codes and access tokens to delegate authorization from the user to the third party provider.  
-   - 'Access Code' is the oAuth 2.0 flow used in the Payment Authorization API.
+   - 'Access Code' is the oAuth 2.0 flow used in the Payment Authorization API. The diagram below gives a detailed step by step guide of the access code oAuth flow. However, in summary, it invovles the user (client) being redirected to the AAS  and obtaining an authorization code. The authorization code is handed to the third party provider who in turns exchanges it for an access token which can then be used to make the payment. 
+   - The oAuth flow has been enhanced slightly in this lab to include the passing of a payment ID in the oAuth flow. This is an important addition because in this scenario the user doesn't want to delegate authorization of a full 'scope' to the third party. The scope being used is 'payment approval' which means the user would be authorizing the third party to make ANY payment on their behalf. With the addition of the payment ID it means the user is authorizing the third party to make only the single payment being processed and not ANY payment. In this lab the payment ID is included in the URL as a parameter being passed between the different components. A more elegant and secure solution would be to enrich the access token to include the payment ID. API Connect has this capability and more information can be found on the Knowledge Center.
+   
+   [oAuth Metadata](https://www.ibm.com/support/knowledgecenter/en/SSMNED_5.0.0/com.ibm.apic.toolkit.doc/con_metadata.html) 
 
 <img src="/madridapiclab2/images/accesscodeflow.png" width="800">
 
