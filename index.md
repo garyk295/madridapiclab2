@@ -148,7 +148,7 @@ This section will guide you through the creation and configuration of the oAuth 
         - Authentication URL: https://thinkibm-services.mybluemix.net/auth
         - TLS Profile: leave blank
         - Authorize application user using: Authenticated
-        -Leave all other setting as default
+        -Leave all other settings as default
 
       <img src="/madridapiclab2/images/2-3-4.png" width="450">
 
@@ -445,9 +445,9 @@ The structure is:
 
 For example:
        
-     curl -v -k -u 577a3933-7f20-457e-b6af-f0ce3ee5cddc:I1cC4yU7lX2tH2xM2uT3bB3gW7bE5tN7vJ8dG0nN7xX8wI3tW2 -X POST -d 'grant_type=authorization_code&redirect_uri=https://example.com/redirect&code= AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ’  'https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/lab/payment-authorization/oauth2/token'
+     curl -v -k -u 577a3933-7f20-457e-b6af-f0ce3ee5cddc:I1cC4yU7lX2tH2xM2uT3bB3gW7bE5tN7vJ8dG0nN7xX8wI3tW2 -X POST -d 'grant_type=authorization_code&redirect_uri=https://example.com/redirect&code=AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ’ 'https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/lab/payment-authorization/oauth2/token'
 
-Ensure the spaces between the different parts of the command are correct.
+Ensure the spaces between the different parts of the command are correct. If your curl command doesn't work, also try removing the quotes surrounding the URL for the token.
 
 
 
@@ -456,8 +456,10 @@ Ensure the spaces between the different parts of the command are correct.
 
 
     { "token_type":"bearer", "access_token":"AAEkNTc3YTM5MzMtN2YyMC00NTdlLWI2YWYtZjBjZTNlZTVjZGRjqROf_74P_zTkHshgnZPpiIbWN6_JJyS9MzxPlkD17aRufXpdyaj4D3fgkla-JTRq7UV69n97wpjV0l9odtJeuYYRReX--UhPcyRZXVOVxnU", "expires_in":3600, "scope":"payment_approval" }
-        
-        
+  
+  
+7.The authorization code in generated in the previous section only has a few minutes before it becomes invalid. It may therefore be necessary to repeat section 2.10 and generate a new authorization code.
+
 ### 2.12 Executing the payment using the access token 
 
 Now the third party provider has the access token and the payment ID from earlier. It can now finalise the payment by calling the POST /payments/{id}/execute operation inside the payment API of the financial institution. 
