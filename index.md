@@ -1,6 +1,12 @@
 
 # Lab 2: Protecting a payments API using oAuth 2.0
 
+In this lab you will learn how to secure an API using oAuth 2.0.
+
+
+<img src="/madridapiclab2/images/arc_diag.png" width="450">
+
+
 ## Part 1: Set up API Connect
 
 This section can be skipped if you already have a Bluemix account and an API Connect service provisioned. If not, please follow the link below and complete ‘Lab 0 - Setup IBM API Connect’. Once complete, return to this document and move onto part 2. 
