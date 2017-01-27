@@ -292,7 +292,6 @@ Here is an example:
 5.Enter 
 
 - username=johndoe 
-
 - password=password 
 
 then click login
