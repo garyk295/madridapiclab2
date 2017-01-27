@@ -15,7 +15,7 @@ The following diagram outlines the key interactions that we will be building in 
 
 <img src="/madridapiclab2/images/arc_diag.png" width="800">
 
-The components we have in this lab are:
+The components in this lab are:
 
 - **The Payments API**: 
   - The Payments API is hosted and exposed by a financial institution who wants to allow third parties to make payments on behalf of its customers. 
