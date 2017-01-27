@@ -51,7 +51,7 @@ The sequence of events to make a payment are:
 
 1. The third party calls the 'POST /payments' operation on behalf of the user to initiate the payment. The operation returns a payment ID to the third party.
 
-2. The third party redirects the user to the Authentication and Authorization Server to sign-in, approve the payment and obtain an authorization code.
+2. The third party redirects the user to the Authentication and Authorization Server (passing the payment ID) to sign-in, approve the payment and obtain an authorization code.
 
 3. The user (client) passes the authorization code to the third party, and the third party exchanges it for an access token (this is done by calling an operation exposed by the Payment Authorization (oAuth 2.0) API). 
 
