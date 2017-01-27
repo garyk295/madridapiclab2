@@ -1,15 +1,24 @@
 
 # Lab 2: Protecting a payments API using oAuth 2.0
 
-In this lab you will learn how to secure an API using oAuth 2.0.
+In this lab you will learn how to secure an API using oAuth 2.0. The API you are securing is named 'Payments' and it has already been created for you. The instructions will guide you through how to create an oAuth 2.0 provider and then how to secure the 'Payments' API using the oAuth 2.0 provider you create. 
 
-oAuth 2.0 is defined as:
+Before we go further, let's take a look at the definition of oAuth 2.0:
 
 "The OAuth 2.0 authorization framework enables a third-party
    application to obtain limited access to an HTTP service, either on
    behalf of a resource owner by orchestrating an approval interaction
    between the resource owner and the HTTP service, or by allowing the
    third-party application to obtain access on its own behalf."
+
+
+The components we have in this lab are:
+
+- **The Payments API**: 
+   - The payments API has 2 operations
+      - The first operation is 'POST /Payment' which allows a third party provider to initiate a payment on behalf of a user. Note this puts the payment in a 'pending' state.
+      - The second  
+
 
 <img src="/madridapiclab2/images/arc_diag.png" width="900">
 
