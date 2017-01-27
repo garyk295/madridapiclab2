@@ -19,19 +19,19 @@ The components in this lab are:
 
 - **The Payments API**: 
   - The Payments API is hosted and exposed by a financial institution who wants to allow third parties to make payments on behalf of its customers. 
-  - The payments API has 2 operations
+  - The payments API is deployed on API Connect has 2 operations
       - The first operation is 'POST /payments' which allows a third party provider to initiate a payment on behalf of a user. Note this puts the payment in a 'pending' state and returns back a payment ID to the third party provider. This operation is secured by API keys only (no oAuth). 
-      - The second  operation is 'POST /payments/{id}/execute' which allows the third party to finalise a payment and set it to an 'executed' state using the payment ID issued in the previous API call. This operation is secured by oAuth, therefore the user has to be redirected by the third party to the financial institution so they can sign in and confirm they autorise the third party to make the payment on their behalf. The oAUth flow handles the interaction between the user, third party provider and financial institution and it uses authorization codes and access tokens to delegate autorisation from the user to the third party provider.  
+      - The second  operation is 'POST /payments/{id}/execute' which allows the third party to finalise a payment and set it to an 'executed' state using the payment ID issued in the previous API call. This operation is secured by oAuth, therefore the user has to be redirected by the third party to the financial institution so they can sign in and confirm they authorize the third party to make the payment on their behalf. The oAUth flow handles the interaction between the user, third party provider and financial institution and it uses authorization codes and access tokens to delegate authorization from the user to the third party provider.  
       
 - **Authentication and Authorization Server**
    - This is the Authentication and Authorization Server (AAS) of the financial institution hosting the payments API. 
-   - The user is redirected to the AAS of the financial institution to sign-in confirm they are happy to give the third party provider persmission to make the payment. 
+   - The user is redirected to the AAS of the financial institution to sign-in confirm they are happy to give the third party provider permission to make the payment. 
    - The user signs-in via the web interface of the AA and asked if they approve the payment they are shown on screen.
    - If the user confirms the AAS redirects them back to the third party via API Connect.
    - The AAS has been provided for you in this lab. 
 
 - **The Payment Authorization (oAuth 2.0) API**: 
-   - The Payment Authorization API (oAuth flow) handles the interaction between the user, third party provider and financial institution and it uses authorization codes and access tokens to delegate autorisation from the user to the third party provider.  
+   - The Payment Authorization API (oAuth flow) handles the interaction between the user, third party provider and financial institution and it uses authorization codes and access tokens to delegate authorization from the user to the third party provider.  
    - 'Access Code' is the oAuth 2.0 flow used in the Payment Authorization API.
 
 <img src="/madridapiclab2/images/acesscodeflow.png" width="800">
