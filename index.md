@@ -306,9 +306,9 @@ then click login
 
 7.You will be redirected to ‘example.com/redirect’. Appended to the URL there will be the authorization code you require to obtain the access token in the next step. Copy this code and keep note of it. 
 
-The authorization code from below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
+The authorization code from the URL below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
 
-        https://example.com/redirect?code=AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
+     https://example.com/redirect?code=AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
 
   <img src="/madridapiclab2/images/2-10-4.png" width="450">
 
@@ -345,7 +345,7 @@ Ensure the spaces between the different parts of the command are correct.
 
 
 
-6.	Run the command you constructed in the previous step on the command line/terminal. The response should look like below. Take a note of the access token in the response. 
+6.Run the command you constructed in the previous step on the command line/terminal. The response should look like below. Take a note of the access token in the response. 
 
 
         { "token_type":"bearer", "access_token":"AAEkNTc3YTM5MzMtN2YyMC00NTdlLWI2YWYtZjBjZTNlZTVjZGRjqROf_74P_zTkHshgnZPpiIbWN6_JJyS9MzxPlkD17aRufXpdyaj4D3fgkla-JTRq7UV69n97wpjV0l9odtJeuYYRReX--UhPcyRZXVOVxnU", "expires_in":3600, "scope":"payment_approval" }
