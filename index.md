@@ -55,7 +55,7 @@ The sequence of events to make a payment are:
 
 3. The user (client) passes the authorization code to the third party, and the third party exchanges it for an access token (this is done by calling an operation exposed by the Payment Authorization (oAuth 2.0) API). 
 
-4. The third party calls the POST /payments/{id}/execute passing the payment ID to execute the payment
+4. The third party calls the POST /payments/{id}/execute operation passing the payment ID to execute the payment
 
 ### Practical Notes
 - In this lab you will be acting as the user, user client and third party provider. 
