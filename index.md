@@ -50,9 +50,9 @@ This section can be skipped if you already have a Bluemix account and an API Con
         
 5.	Scroll down until you can see the paths of the API. You will see 2 paths have been created for you:
 
- a. POST / payments – this allows a payment reservation to be created and passes back a payment ID
+ - a. POST / payments – this allows a payment reservation to be created and passes back a payment ID
  
- b. POST payments/{id}/execute – this executes the payment and finalises it. It accepts a payment ID as a parameter in the URL (passed back from operation a). 
+ - b. POST payments/{id}/execute – this executes the payment and finalises it. It accepts a payment ID as a parameter in the URL (passed back from operation a). 
  
    <img src="/madridapiclab2/images/2-2-3.png" width="450">
 
