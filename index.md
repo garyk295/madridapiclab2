@@ -56,7 +56,8 @@ This section can be skipped if you already have a Bluemix account and an API Con
  
 
    <img src="/madridapiclab2/images/2-2-3.png" width="450">
-        
+
+
 6.	Click on the 'All APIs' buton on the top left to return back to the main screen.
 
 ### 2.3 Creating the oAuth provider
