@@ -54,8 +54,8 @@ This section can be skipped if you already have a Bluemix account and an API Con
  
  b. POST payments/{id}/execute – this executes the payment and finalises it. It accepts a payment ID as a parameter in the URL (passed back from operation a). 
  
-
    <img src="/madridapiclab2/images/2-2-3.png" width="450">
+
 
 
 6.	Click on the 'All APIs' buton on the top left to return back to the main screen.
