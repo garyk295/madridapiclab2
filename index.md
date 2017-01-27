@@ -4,7 +4,7 @@
 In this lab you will learn how to secure an API using oAuth 2.0.
 
 
-<img src="/madridapiclab2/images/arc_diag.png" width="450">
+<img src="/madridapiclab2/images/arc_diag.png" width="900">
 
 
 ## Part 1: Set up API Connect
