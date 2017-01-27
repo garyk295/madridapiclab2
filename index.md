@@ -47,7 +47,7 @@ The components in this lab are:
 
 ### Sequence of events
 
-The sequence of events to make a payment are:
+The sequence of events to make a payment is:
 
 1. The third party calls the 'POST /payments' operation on behalf of the user to initiate the payment. The operation returns a payment ID to the third party.
 
@@ -55,10 +55,10 @@ The sequence of events to make a payment are:
 
 3. The user (client) passes the authorization code to the third party, and the third party exchanges it for an access token (this is done by calling an operation exposed by the Payment Authorization (oAuth 2.0) API). 
 
-4. The third party calls the POST /payments/{id}/execute operation passing the payment ID to execute the payment
+4. The third party calls the POST /payments/{id}/execute operation passing the payment ID and access token to execute the payment
 
 ### Practical Notes
-- In this lab you will be acting as the user, user client and third party provider. 
+- In this lab you will be acting as the user, user client, financial institution and third party provider. 
 - All the steps described above (e.g. sequence of events) you will be performing manually so you can understand how the flow and interactions work. 
 - When running commands, particularly 'curl' commands, watch out for spaces and 'quotes'.
 - Each section in the lab has a brief explanation of what you will be performing in that particular section. However, it's worth keeping in mind the wider picture of what you are building and relate each section back to it. 
@@ -360,6 +360,11 @@ The first step is to initiate the payment by calling the POST /payments API.
       <img src="/madridapiclab2/images/2-9-2.png" width="450">
 
 ### 2.10 Retrieving the authorization code 
+
+In this step you will be retrieving the authorization code. The authorization code is the intermediately token given to the users client after they have authenticated with the authentication and authorization server (AAS) of the financial institution and approved the payment. It is an indication that the customer is happy to grant the third party provider access to make the payment on their behalf.
+
+Here you are assuming the role of the customer who is signing into the AAS of the financial institution and giving your permission to the third party provider. 
+
 1.	On the left hand side, click on the payment authorization API to expand the operations
 2.	Click on the GET /oauth2/authorize operation and you will see a URL in a section named ‘Try this operation’. Take note of this URL, it will look something like
 
@@ -371,7 +376,7 @@ The first step is to initiate the payment by calling the POST /payments API.
       <img src="/madridapiclab2/images/2-10-1.png" width="450">
         
         
-3.	You will call the URL you took note of via a web browser, however we must append some parameters to it in order to properly authenticate and get the access token. We must add
+3.	You will call the URL you took note of via a web browser, however we must append some parameters to it in order to properly authenticate and get the authorization code. You must add
 
         - response_type=code
         - scope=payment_approval
@@ -411,6 +416,13 @@ The authorization code from the URL below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4S
 
 ### 2.11 Retrieving the access token 
 
+In this section you will be retrieving the access token using the authorization code obtained in the previous section. 
+
+When the authorization code was received by users client, it was then passed back to the third party provider via the redirect url. The third party provider then calls the POST /oauth2/token operation inside the payment authorization API of the financial institution to exchange the authorization code for the access token. 
+
+You are assuming the role of the third party provider in this section.
+
+
 1.	Return back to the developer portal in your web browser and go back to the payments API product.
 
 2.	Expand the payment authorization API and select the POST /oauth2/token operation 
@@ -449,6 +461,12 @@ Ensure the spaces between the different parts of the command are correct.
         
         
 ### 2.12 Executing the payment using the access token 
+
+Now the third party provider has the access token and the payment ID from earlier. It can now finalise the payment by calling the POST /payments/{id}/execute operation inside the payment API of the financial institution. 
+
+You are assuming the role of the third party provider in this section.
+
+
 1.	Return back to the developer portal in your web browser and go back to the payments API product.
 2.	Expand the payments API and select the POST /payments/{id}/execute operation.
     
