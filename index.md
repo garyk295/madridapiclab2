@@ -287,18 +287,21 @@ Here is an example:
         https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/workshop-demo/payment-authorization/oauth2/authorize?response_type=code&scope=payment_approval&payment_id=999&client_id=dcebcce4-91ae-4af4-9c14-c812e1677937&redirect_uri=https://example.com/redirect
         
         
-4.	Now call you constructed in the previous step from your web browser (just like you were visiting http://ibm.com). You will be redirected to the external authorization and authentications login page 
-5.	Enter username=johndoe and password=password, the click login
+4.Now call you constructed in the previous step from your web browser (just like you were visiting http://ibm.com). You will be redirected to the external authorization and authentications login page 
+5.Enter 
+- username=johndoe 
+- password=password 
+then click login
  
 
-      <img src="/madridapiclab2/images/2-10-2.png" width="450">
+   <img src="/madridapiclab2/images/2-10-2.png" width="450">
 
 
-6.	Click ‘approve payment’
+6.Click ‘approve payment’
  
-      <img src="/madridapiclab2/images/2-10-3.png" width="450">
+   <img src="/madridapiclab2/images/2-10-3.png" width="450">
 
-7.	You will be redirected to ‘example.com/redirect’. Appended to the URL there will be the authorization code you require to obtain the access token in the next step. Copy this code and keep note of it. 
+7.You will be redirected to ‘example.com/redirect’. Appended to the URL there will be the authorization code you require to obtain the access token in the next step. Copy this code and keep note of it. 
 
 The authorization code from below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ
 
