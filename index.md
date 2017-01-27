@@ -334,11 +334,11 @@ The authorization code from the URL below is: AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4S
 
 The structure is:
 
-          curl -v -k -u <client id>:<client secret> -X POST -d 'grant_type=authorization_code&redirect_uri=https://example.com/redirect&code=< authorization code>’ '<token url>’
+     curl -v -k -u <client id>:<client secret> -X POST -d 'grant_type=authorization_code&redirect_uri=https://example.com/redirect&code=< authorization code>’ '<token url>’
 
 For example:
        
-         curl -v -k -u 577a3933-7f20-457e-b6af-f0ce3ee5cddc:I1cC4yU7lX2tH2xM2uT3bB3gW7bE5tN7vJ8dG0nN7xX8wI3tW2 -X POST -d 'grant_type=authorization_code&redirect_uri=https://example.com/redirect&code= AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ’  'https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/lab/payment-authorization/oauth2/token'
+     curl -v -k -u 577a3933-7f20-457e-b6af-f0ce3ee5cddc:I1cC4yU7lX2tH2xM2uT3bB3gW7bE5tN7vJ8dG0nN7xX8wI3tW2 -X POST -d 'grant_type=authorization_code&redirect_uri=https://example.com/redirect&code= AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ’  'https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/lab/payment-authorization/oauth2/token'
 
 Ensure the spaces between the different parts of the command are correct.
 
