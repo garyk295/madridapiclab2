@@ -1,8 +1,10 @@
 
 # Lab: Securing the payments API using oAuth 2.0
 
+### Introduction
 In this lab you will learn how to secure an API using oAuth 2.0. The API you are securing is named 'Payments' and it has already been created for you. The instructions will guide you through how to create an oAuth 2.0 provider and then how to secure the 'Payments' API using the oAuth 2.0 provider you create. 
 
+### What is oAuth 2.0?
 Before we go further, let's take a look at the definition of oAuth 2.0:
 
 "The OAuth 2.0 authorization framework enables a third-party
@@ -11,6 +13,7 @@ Before we go further, let's take a look at the definition of oAuth 2.0:
    between the resource owner and the HTTP service, or by allowing the
    third-party application to obtain access on its own behalf."
 
+### Components in this Lab
 The following diagram outlines the key interactions that we will be building in this lab.
 
 <img src="/madridapiclab2/images/arc_diag.png" width="800">
@@ -42,8 +45,18 @@ The components in this lab are:
 
 <img src="/madridapiclab2/images/accesscodeflow.png" width="800">
 
+### Sequence of events
+The sequence of events to make a payment are:
+1. The third party calls the 'POST /payments' operation on behalf of the user to initiate the payment. The operation returns a payment ID to the third party.
+2. The third party redirects the user to the Authentication and Authorization Server to sign-in, approve the payment and obtain an authorization code.
+3. The user (client) passes the authorization code to the third party, and the third party exchanges it for an access token (this is done by calling an operation exposed by the Payment Authorization (oAuth 2.0) API). 
+4. The third party calls the POST /payments/{id}/execute passing the payment ID to execute the payment
 
-
+### Practical Notes
+- In this lab you will be acting as the user, user client and third party provider. 
+- All the steps described above (e.g. sequence of events) you will be performing manually so you can understand how the flow and interactions work. 
+- When running commands, particularly 'curl' commands, watch out for spaces and 'quotes'.
+- Each section in the lab has a brief explanation of what you will be performing in that particular section. However, it's worth keeping in mind the wider picture of what you are building and relate each section back to it. 
 
 ## Part 1: Set up API Connect
 
