@@ -236,7 +236,7 @@ This part of the lab will walk you through the steps required to secure the paym
 
 5.Scroll down to the ‘Paths section and expand the path for ‘POST payments/{id}/execute’.
 
-6.Ensure the security options for the API does not use the ‘API security definitions’ and instead is set to have the ‘payment approval’ oAuth  (note the client ID and client secret should also be unset). 
+6.Ensure the security options for the API does not use the ‘API security definitions’ and instead is set to have the ‘payment approval’ oAuth, the clientIdHeader and the clientSecretHeader all set.  
  
    <img src="/madridapiclab2/images/2-4-5.png" width="450">
 
