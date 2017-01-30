@@ -86,7 +86,7 @@ This section will guide you through the set up of the base API Connect project o
                        
 4.  Clone the API Connect project from github by running the following command
 
-         git clone https://github.com/garyk295/madridapiclab2code
+         git clone https://github.com/ibm-apiconnect/faststart-code
 
 
 5.	Change to the directory you just created by running the following command
