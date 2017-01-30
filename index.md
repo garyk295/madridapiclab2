@@ -445,7 +445,7 @@ The structure is:
 
 For example:
        
-     curl -v -k -u 577a3933-7f20-457e-b6af-f0ce3ee5cddc:I1cC4yU7lX2tH2xM2uT3bB3gW7bE5tN7vJ8dG0nN7xX8wI3tW2 -X POST -d 'grant_type=authorization_code&redirect_uri=https://example.com/redirect&code=AAKm5rxLqxTqUNAnqRQIfg4raNxLxGiI4SWNvIfczRNGFjxm9658XEzcNg25ErFYROEp5OL9Z46EKVi_HLuzHmDiQnT9BoNQ6cAWue9atl2gHQ’ 'https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/lab/payment-authorization/oauth2/token'
+     curl -v -k -u 14e0a9f9-cf4e-4e51-9ac6-c7152ced73ca:pY7gE3vK5oY5pL1dW4pO5hS3uE2dN7gV7pL3fR5xL1tI6vE5uE -X POST -d 'grant_type=authorization_code&redirect_uri=https://example.com/redirect&code=AALHIXey-Vnp6qpoFZqFgrxvU26nkAwn7PVzgxEnFNhcX-CU8nX1yx1DyLzPxDlL279Gz-2QeYy65pTirlE5FEAHcGybo_EqwPGcmykNfps-Fw' 'https://api.eu.apiconnect.ibmcloud.com/garykeanukibmcom-apiconnect/lab/payment-authorization/oauth2/token'
 
 Ensure the spaces between the different parts of the command are correct. If your curl command doesn't work, also try removing the quotes surrounding the URL for the token.
 
