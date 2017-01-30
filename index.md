@@ -91,7 +91,7 @@ This section will guide you through the set up of the base API Connect project o
 
 5.	Change to the directory you just created by running the following command
 
-         cd madridapiclab2code
+         cd faststart-code
 
 6.	Run the following command to install the required NPM dependencies
 
