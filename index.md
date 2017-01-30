@@ -202,7 +202,7 @@ This part of the lab will walk you through the steps required to secure the paym
 
          The Token URL is:
 
-         Base URL>/payment-authorization/oauth2/token
+         <Base URL>/payment-authorization/oauth2/token
 
 
          An alternative method of retrieving these URLs is described below. 
