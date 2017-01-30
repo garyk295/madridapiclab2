@@ -194,7 +194,7 @@ This part of the lab will walk you through the steps required to secure the paym
         - Token URL: see below
         - Add a scope using the (+), scope name: payment_approval
 
-         The easiest way to get the Authorization and Token URLs is to log onto your API Connect instance on Bluemix and click          into the catalogue you are planning to deploy to (e.g. Sandbox). Click on ‘Settings’ on the menu bar then the sub-            menu for ‘Endpoints’. Note down the ‘Base URL’. 
+         The easiest way to get the Authorization and Token URLs is to log onto your API Connect instance on Bluemix and click into the catalogue you are planning to deploy to (e.g. Sandbox). Click on ‘Settings’ on the menu bar then the sub-menu for ‘Endpoints’. Note down the ‘Base URL’. 
          
          The Authorization URL is:
 
