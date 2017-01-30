@@ -242,11 +242,11 @@ This part of the lab will walk you through the steps required to secure the paym
         
         
         
-4.Scroll down to the ‘Security’ section of the API and you will see that the client ID and the client Secret are the default security measures added to each operation of the API unless configured otherwise. We therefore have to specifically add the oAuth 2.0 provider we created to the execute payment operation. Ensure the ‘Security’ section of your API matches the screen shot below.  
+4.Scroll down to the ‘Paths section of the API 
  
    <img src="/madridapiclab2/images/2-4-3.png" width="450">
 
-5.Scroll down to the ‘Paths section and expand the path for ‘POST payments/{id}/execute’.
+5.Expand the path for ‘POST payments/{id}/execute’.
 
 6.Ensure the security options for the API does not use the ‘API security definitions’ and instead is set to have the ‘payment approval’ oAuth, the clientIdHeader and the clientSecretHeader all set.  
  
